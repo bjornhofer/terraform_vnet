@@ -1,4 +1,4 @@
-variable "vnet_ressource_group_name" {
+variable "vnet_resource_group_name" {
   type        = string
   description = "resource group for the VNET"
 

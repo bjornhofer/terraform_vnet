@@ -15,11 +15,11 @@ variable "vnet_location" {
 
 variable "vnet_address_space" {
   type        = list(any)
-  description = "IP scope of the VNET"
+  description = "IP scope of the VNET (e.g. [ '192.168.0.0/23' ])"
 }
 
 variable "vnet_subnet_details" {
   type        = map(any)
   default     = null
-  description = "Map of the subnetdetails (e.g. {'subnet1' = '192.168.0.0/24'})"
+  description = "Map of the subnetdetails (e.g. {'subnet1' = ['192.168.0.0/24']})"
 }

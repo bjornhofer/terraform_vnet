@@ -3,6 +3,7 @@ resource "azurerm_virtual_network" "main" {
   location            = var.vnet_location
   resource_group_name = var.vnet_resource_group_name
   address_space       = var.vnet_address_space
+  provider = azurerm.vnet
 }
 
 resource "azurerm_subnet" "main" {
@@ -14,4 +15,5 @@ resource "azurerm_subnet" "main" {
   depends_on = [
     azurerm_virtual_network.main
   ]
+  provider = azurerm.vnet
 }

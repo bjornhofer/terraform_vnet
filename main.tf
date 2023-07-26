@@ -1,3 +1,4 @@
+/*
 provider "azurerm" {
   features {}
   alias = "vnet"
@@ -6,6 +7,7 @@ provider "azurerm" {
   client_secret = var.client_secret
   tenant_id = var.tenant_id
 } 
+*/
 
 resource "azurerm_virtual_network" "main" {
   name                = var.vnet_name

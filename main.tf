@@ -1,20 +1,8 @@
-/*
-provider "azurerm" {
-  features {}
-  alias = "vnet"
-  subscription_id = var.subscription_id
-  client_id = var.client_id
-  client_secret = var.client_secret
-  tenant_id = var.tenant_id
-} 
-*/
-
 resource "azurerm_virtual_network" "main" {
   name                = var.vnet_name
   location            = var.vnet_location
   resource_group_name = var.vnet_resource_group_name
   address_space       = var.vnet_address_space
-  //provider = azurerm.vnet
 }
 
 resource "azurerm_subnet" "main" {
@@ -26,5 +14,4 @@ resource "azurerm_subnet" "main" {
   depends_on = [
     azurerm_virtual_network.main
   ]
-  //provider = azurerm.vnet
 }

@@ -1,21 +1,3 @@
-/*
-variable "subscription_id" {
-  type = string
-}
-
-variable "client_id" {
-  type = string
-}
-
-variable "client_secret" {
-  type = string
-}
-
-variable "tenant_id" {
-  type = string
-}
-*/
-
 variable "vnet_resource_group_name" {
   type        = string
   description = "resource group for the VNET"

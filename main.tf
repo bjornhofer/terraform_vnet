@@ -5,7 +5,7 @@ module "naming" {
 }
 
 resource "azurerm_virtual_network" "main" {
-  name                = length(var.vnet_name) < 0 ? modul.naming.virtual_network.result : var.vnet_name
+  name                = length(var.vnet_name) < 0 ? modul.naming.virtual_network.name : var.vnet_name
   location            = var.vnet_location
   resource_group_name = var.vnet_resource_group_name
   address_space       = var.vnet_address_space

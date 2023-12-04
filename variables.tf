@@ -6,6 +6,7 @@ variable "vnet_resource_group_name" {
 variable "vnet_name" {
   type        = string
   description = "Name of the VNET"
+  default = ""
 }
 
 variable "vnet_name_prefix" {
